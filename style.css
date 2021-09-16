@@ -1,0 +1,121 @@
+body {
+  background-color: #27241d;
+  color: antiquewhite;
+  font-family: 'Inter', sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    gap: 1rem 1rem;
+    grid-auto-rows: minmax(1fr, 1fr);
+    grid-auto-flow: row;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+  
+  .card {
+    padding-bottom: 100%;
+    display: block; 
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+  }
+
+  .card:hover {
+    transform: rotateY(180deg);
+  }
+
+  .front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-size: cover;
+  }
+
+  .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+}
+
+/* pantone feature if time */
+
+main {
+  padding: 10px;
+}
+
+.back header {
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .title {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.title h1 {
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+
+.title p {
+  padding-top: 0px;
+  margin-top: 0px;
+}
+
+.back footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border-top: 2px solid antiquewhite;
+}
+
+.back footer p {
+  background-color: #e6bc15;
+  color: #000000;
+  border: 2px solid black;
+  font-weight: 550;
+  font-size: 25px;
+  padding: 0px 20px 3px 20px;
+  margin-top: 10px;
+}
+
+.back article {
+  font-size: 3vh;
+  margin-top: 10%;
+  margin-bottom: 15%;
+}
+
+
+
+
+@media (max-width: 450px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(200px, 1fr));
+    gap: 1rem 1rem;
+    grid-auto-rows: minmax(1fr, 1fr);
+    grid-auto-flow: row;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+}
+
+@media (min-width: 450px) and (max-width:650px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    gap: 1rem 1rem;
+    grid-auto-rows: minmax(1fr, 1fr);
+    grid-auto-flow: row;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+}
