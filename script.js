@@ -104,6 +104,7 @@ let albums = [bandOfGypsys, abbeyRoad, bitchesBrew, blueTrain, ledZepplin2, dark
 function createCard(albumTitle) {
     let cards = document.createElement("div")
     cards.className = albumTitle.className
+    cards.className = "card"
     document.querySelector(".container").appendChild(cards)
     
     let front = document.createElement("div")
@@ -137,14 +138,14 @@ function createCard(albumTitle) {
     let albumName = document.createElement("h1")
     title.appendChild(albumName)
     albumName.innerText = albumTitle.album  
-    
-    let albumAuthor = document.createElement("p")
-    title.appendChild(albumAuthor)
-    albumAuthor.innerText = albumTitle.year
 
     let albumDate = document.createElement("p")
     date.appendChild(albumDate)
-    albumDate.innerText = albumTitle.artist
+    albumDate.innerText = albumTitle.year
+
+    let albumAuthor = document.createElement("p")
+    title.appendChild(albumAuthor)
+    albumAuthor.innerText = albumTitle.artist
 
     let albumdescription = document.createElement("p")
     article.appendChild(albumdescription)
